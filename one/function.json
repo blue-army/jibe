@@ -1,5 +1,7 @@
 {
   "disabled": false,
+  "scriptFile": "one.dll",
+  "entryPoint": "one.MyClass.Run",
   "bindings": [
     {
       "authLevel": "function",
