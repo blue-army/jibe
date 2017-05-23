@@ -4,6 +4,9 @@ using System.Net;
 using System.Net.Http;
 using Microsoft.Azure.WebJobs.Host;
 using System.Web;
+using Microsoft.Azure.Documents.Client;
+using System;
+using System.Configuration;
 
 namespace one
 {
@@ -11,6 +14,11 @@ namespace one
     {
 		public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 		{
+            var client = new DocumentClient(new Uri("https://zync.documents.azure.com:443/"), "iR5wKpk619PBuIUqu2b5Dec79sXGsHK1P9jdzvmO1m1YBYeS8spFcP9FscoySw7SvOzka1thg14WNMtgCuRitQ==");
+
+            var doc = await client.ReadDocumentAsync("dbs/jibe/colls/projects/977da595-fd0c-f2a5-63c6-edbbcb805e5c");
+            log.Info(doc.Resource.ToString());
+
 			log.Info("C# HTTP trigger function processed a request. RequestUri={req.RequestUri}");
 
 			// parse query parameter
