@@ -1,6 +1,6 @@
 {
   "disabled": false,
-  "scriptFile": "one.dll",
+  "scriptFile": "bin\\one.dll",
   "entryPoint": "one.MyClass.Run",
   "bindings": [
     {
