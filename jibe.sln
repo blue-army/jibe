@@ -8,6 +8,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		host.json = host.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testy", "testy\testy.csproj", "{D2586FDC-BFB6-4283-A0B7-3079D250F402}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{24460E54-C337-438F-B49E-3C814FED6836}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24460E54-C337-438F-B49E-3C814FED6836}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24460E54-C337-438F-B49E-3C814FED6836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2586FDC-BFB6-4283-A0B7-3079D250F402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2586FDC-BFB6-4283-A0B7-3079D250F402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2586FDC-BFB6-4283-A0B7-3079D250F402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2586FDC-BFB6-4283-A0B7-3079D250F402}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

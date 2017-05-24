@@ -3,11 +3,8 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Http;
 using Microsoft.Azure.WebJobs.Host;
-using System.Web;
 using Microsoft.Azure.Documents.Client;
 using System;
-using System.Configuration;
-using System.Collections;
 
 namespace one
 {
@@ -18,9 +15,10 @@ namespace one
             var db_key = System.Environment.GetEnvironmentVariable("db_key");
 
             var client = new DocumentClient(new Uri("https://zync.documents.azure.com:443/"), db_key);
-            var doc = await client.ReadDocumentAsync(UriFactory.CreateDocumentUri("jibe", "projects", "7aff6973-64a0-9cce-d767-a4c01622d7ed"), new RequestOptions());
-            log.Info(doc.Resource.ToString());
+            var response = await client.ReadDocumentAsync(UriFactory.CreateDocumentUri("jibe", "projects", "7aff6973-64a0-9cce-d767-a4c01622d7ed"), new RequestOptions());
+            Project project = (Project)(dynamic)response.Resource;
 
+            log.Info(project.ToString());
 			log.Info("C# HTTP trigger function processed a request. RequestUri={req.RequestUri}");
 
 			// parse query parameter
