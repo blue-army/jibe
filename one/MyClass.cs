@@ -5,6 +5,7 @@ using System.Net.Http;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Azure.Documents.Client;
 using System;
+using Newtonsoft.Json;
 
 namespace one
 {
@@ -18,7 +19,7 @@ namespace one
             var response = await client.ReadDocumentAsync(UriFactory.CreateDocumentUri("jibe", "projects", "7aff6973-64a0-9cce-d767-a4c01622d7ed"), new RequestOptions());
             Project project = (Project)(dynamic)response.Resource;
 
-            log.Info(project.ToString());
+            log.Info(JsonConvert.SerializeObject(project));
 			log.Info("C# HTTP trigger function processed a request. RequestUri={req.RequestUri}");
 
 			// parse query parameter

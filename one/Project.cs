@@ -5,12 +5,8 @@ namespace one
 {
     public class Project
     {
-        public Project()
-        {
-        }
-
-		[JsonProperty(PropertyName = "id")]
-		public string Id { get; set; }
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
 
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
