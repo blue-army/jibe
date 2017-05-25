@@ -10,5 +10,8 @@ namespace one
 
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
+
+		[JsonProperty(PropertyName = "channel")]
+		public string Channel { get; set; }
     }
 }
