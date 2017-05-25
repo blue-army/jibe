@@ -9,12 +9,6 @@ using Newtonsoft.Json;
 
 namespace one
 {
-    public class TeamsMessage
-    {
-        [JsonProperty("text")]
-        public string Text { get; set; }
-    }
-
     public class MyClass
     {
         public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)

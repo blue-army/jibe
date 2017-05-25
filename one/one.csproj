@@ -86,6 +86,7 @@
     <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Project.cs" />
+    <Compile Include="TeamsMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
